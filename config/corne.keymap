@@ -37,7 +37,7 @@
 
             label = "Raise";
             bindings = <
-&kp TAB           &kp N1        &kp N2        &kp N3    &kp N4       &kp N5             &kp N6    &kp N7         &kp N8         &kp N9        &kp N0         &kp PIPE
+&kp TILDE         &kp N1        &kp N2        &kp N3    &kp N4       &kp N5             &kp N6    &kp N7         &kp N8         &kp N9        &kp N0         &kp PIPE
 &kp SINGLE_QUOTE  &kp EXCL      &kp AT_SIGN   &kp HASH  &kp DOLLAR   &kp LEFT_BRACE     &kp LBKT  &kp UNDER      &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)   &kp DOUBLE_QUOTES
 &kp LSHFT         &kp KP_EQUAL  &kp KP_MINUS  &kp PLUS  &kp PERCENT  &kp RIGHT_BRACE    &kp RBKT  &kp LS(CARET)  &kp AMPERSAND  &trans        &kp BACKSLASH  &kp TILDE
                                               &kp LGUI  &trans       &kp SPACE          &kp RET   &trans         &kp RALT
@@ -53,10 +53,10 @@
 
             label = "Lower";
             bindings = <
-&kp TAB     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5          &kp F6    &kp F7    &kp F8    &kp F9     &kp F10  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans   &kp F11
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans   &kp F12
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&kp TAB     &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                  &kp F6    &kp F7    &kp F8    &kp F9     &kp F10  &kp K_LOCK
+&kp CAPS    &trans        &kp K_COPY    &kp K_PASTE   &trans        &kp RG(RS(NUMBER_5))    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans   &kp F11
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans    &trans    &trans    &trans     &trans   &kp F12
+                                        &kp LGUI      &trans        &kp SPACE               &kp RET   &trans    &kp RALT
             >;
         };
 
