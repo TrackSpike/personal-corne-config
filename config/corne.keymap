@@ -21,10 +21,10 @@
 
             label = "Base";
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T            &kp Y                &kp U  &kp I      &kp O    &kp P     &trans
-&kp ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G            &kp H                &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
-&kp LSHFT   &kp Z  &kp X  &kp C     &kp V  &kp B            &kp N                &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_CONTROL
-                          &kp LGUI  &mo 1  &kp BACKSPACE    &mt LG(SPACE) SPACE  &mo 2  &kp RALT
+&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T            &kp Y      &kp U  &kp I      &kp O    &kp P     &trans
+&kp ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G            &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp ENTER
+&kp LSHFT   &kp Z  &kp X  &kp C     &kp V  &kp B            &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_CONTROL
+                          &kp LGUI  &mo 1  &kp BACKSPACE    &kp SPACE  &mo 2  &kp RALT
             >;
         };
 
@@ -40,7 +40,7 @@
 &kp TILDE         &kp N1        &kp N2        &kp N3    &kp N4       &kp N5             &kp N6    &kp N7         &kp N8         &kp N9        &kp N0         &kp PIPE
 &kp SINGLE_QUOTE  &kp EXCL      &kp AT_SIGN   &kp HASH  &kp DOLLAR   &kp LEFT_BRACE     &kp LBKT  &kp UNDER      &kp LS(STAR)   &kp LS(LPAR)  &kp LS(RPAR)   &kp DOUBLE_QUOTES
 &kp LSHFT         &kp KP_EQUAL  &kp KP_MINUS  &kp PLUS  &kp PERCENT  &kp RIGHT_BRACE    &kp RBKT  &kp LS(CARET)  &kp AMPERSAND  &trans        &kp BACKSLASH  &kp TILDE
-                                              &kp LGUI  &trans       &kp SPACE          &kp RET   &trans         &kp RALT
+                                              &kp LGUI  &trans       &trans             &trans    &trans         &kp RALT
             >;
         };
 
@@ -53,10 +53,10 @@
 
             label = "Lower";
             bindings = <
-&kp TAB         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                  &kp F6    &kp F7    &kp F8    &kp F9     &kp F10  &kp RC(LG(Q))
-&kp CAPS        &trans        &kp LG(C)     &kp LG(V)     &trans        &kp RG(RS(NUMBER_5))    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans   &kp F11
-&kp LEFT_SHIFT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &trans    &trans    &trans    &trans     &trans   &kp F12
-                                            &kp LGUI      &trans        &trans                  &trans    &trans    &kp RALT
+&kp TAB         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                  &kp F6      &kp F7             &kp F8           &kp F9     &kp F10  &kp RC(LG(Q))
+&kp CAPS        &trans        &kp LG(C)     &kp LG(V)     &trans        &kp RG(RS(NUMBER_5))    &kp LEFT    &kp DOWN           &kp UP           &kp RIGHT  &trans   &kp F11
+&kp LEFT_SHIFT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            &kp K_MUTE  &kp K_VOLUME_DOWN  &kp K_VOLUME_UP  &trans     &trans   &kp F12
+                                            &kp LGUI      &trans        &trans                  &trans      &trans             &kp RALT
             >;
         };
 
