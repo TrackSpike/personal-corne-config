@@ -7,10 +7,6 @@
 
 #define ___ &trans
 
-#define DEF 0  // layer shortcuts, must match order in which they are defined below
-#define UPR 1
-#define LOW 2
-
 /* keymap */
 
 ZMK_LAYER(default_layer,
@@ -21,7 +17,7 @@ ZMK_LAYER(default_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RIGHT_CONTROL
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                      &kp LGUI      &mo UPR       &kp BACKSPACE                   &kp SPACE     &mo LOW           &kp RALT
+                                      &kp LGUI      &mo 1       &kp BACKSPACE                   &kp SPACE     &mo 2           &kp RALT
      //                             ╰─────────────┴─────────────┴─────────────╯                ╰─────────────┴─────────────┴─────────────╯
 )
 
