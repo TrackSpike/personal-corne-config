@@ -7,22 +7,21 @@
 
 #define ___ &trans
 
-#define DEF 0
-#define UPR 1
-#define LOW 2
+#define DEFAULT 0
+#define LOWER 1
+#define UPPER 2
 
 /* Homerow mods */
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                     
-#define QUICK_TAP_MS 175
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
     ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
-        quick-tap-ms = <QUICK_TAP_MS>; \
+        quick-tap-ms = <175>; \
         require-prior-idle-ms = <150>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
@@ -41,11 +40,11 @@ ZMK_LAYER(default_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH      &kp RIGHT_CONTROL
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                  &kp LGUI      &mo 1       &kp BACKSPACE                   &kp SPACE     &mo 2           &kp RALT
+                                                  &kp LGUI      &mo LOWER       &kp BACKSPACE                   &kp SPACE     &mo UPPER           &kp RALT
      //                                           ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
 )
 
-ZMK_LAYER(upper_layer,
+ZMK_LAYER(lower_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp TILDE         &kp N1        &kp N2        &kp N3    &kp N4       &kp N5             &kp N6    &kp N7         &kp N8         &kp N9        &kp N0         &kp PIPE
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
@@ -57,7 +56,7 @@ ZMK_LAYER(upper_layer,
      //                                           ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
 )
 
-ZMK_LAYER(lower_layer,
+ZMK_LAYER(upper_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp TAB         &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                  &kp F6      &kp F7             &kp F8           &kp F9     &kp F10  &kp RC(LG(Q))
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
