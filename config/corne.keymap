@@ -5,8 +5,6 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
-#include <homerowmods.dtsi>
-
 #define ___ &trans
 
 #define DEFAULT 0
@@ -14,6 +12,30 @@
 #define SYMBOLS 3
 #define NAV 4
 #define FUN 5
+
+#define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5
+#define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5
+#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                     
+
+ZMK_BEHAVIOR(hml, hold_tap,
+     flavor = "balanced";
+     tapping-term-ms = <280>;
+     quick-tap-ms = <175>;                
+     require-prior-idle-ms = <150>;
+     bindings = <&kp>, <&kp>;
+     hold-trigger-key-positions = <KEYS_R THUMBS>;
+     hold-trigger-on-release;             
+)
+
+ZMK_BEHAVIOR(hmr, hold_tap,
+     flavor = "balanced";
+     tapping-term-ms = <280>;
+     quick-tap-ms = <175>;               
+     require-prior-idle-ms = <150>;
+     bindings = <&kp>, <&kp>;
+     hold-trigger-key-positions = <KEYS_L THUMBS>;
+     hold-trigger-on-release;           
+)
 
 /* keymap */
 
@@ -33,9 +55,9 @@ ZMK_LAYER(num_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
          ___            ___            &kp N7         &kp N8       &kp N9       &kp COLON        ___           ___           ___           ___           ___           ___
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         ___           &kp KP_MINUS  &kp N4         &kp N5         &kp N6         &kp PLUS        ___           &kp RGUI     &kp RALT       &kp RCTRL     &kp RSHFT     ___
+         ___           &kp KP_MINUS    &kp N4         &kp N5         &kp N6         &kp PLUS        ___           &kp RGUI     &kp RALT       &kp RCTRL     &kp RSHFT     ___
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         ___           &kp KP_EQUAL   &kp N1         &kp N2         &kp N3        &kp PERCENT      ___           ___           ___           ___           ___           ___
+         ___           &kp KP_EQUAL    &kp N1         &kp N2         &kp N3        &kp PERCENT      ___           ___           ___           ___           ___           ___
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                                                        &kp DOT     &kp N0       ___                 ___            ___            ___
     //                                           ╰─────────────┴─────────────┴─────────────╯  ╰─────────────┴─────────────┴─────────────╯
