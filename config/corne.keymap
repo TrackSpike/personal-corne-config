@@ -11,7 +11,7 @@
 #define NAV 3
 #define FUN 4
 
-#include "combos.dtsi"
+// #include "combos.dtsi"
 
 #define ___ &trans
 
