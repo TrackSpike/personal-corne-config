@@ -5,10 +5,12 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
+#include "combos.dtsi"
+
 #define ___ &trans
 
-#define DEFAULT 0
-#define NUMBERS 1
+#define DEF 0
+#define NUM 1
 #define SYMBOLS 2
 #define NAV 3
 #define FUN 4
@@ -46,17 +48,15 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 };
 
 
-/* keymap */
-
-ZMK_LAYER(default_layer,
+ZMK_LAYER(DEF_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P           ___ 
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp ESC       &hml LSHFT A  &hml LCTRL S  &hml LALT D   &hml LGUI F   &kp G             &kp H         &hmr RGUI J   &hmr RALT K   &hmr RCTRL L  &hmr RSHFT SEMI  &kp ENTER 
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH        &kp APOS
+          ___           &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH        &kp APOS
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                                                    &mo FUN      &mo NAV        &kp BACKSPACE     &lt SYMBOLS SPACE &mo NUMBERS &kp RSHFT
+                                                    ___           &mo FUN       &lt NAV BACKSPACE &lt SYMBOLS SPACE &mo NUM &kp RSHFT
      //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
