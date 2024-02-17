@@ -5,15 +5,16 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
-#include "combos.dtsi"
-
-#define ___ &trans
-
 #define DEF 0
 #define NUM 1
 #define SYMBOLS 2
 #define NAV 3
 #define FUN 4
+
+#include "combos.dtsi"
+
+#define ___ &trans
+
 
 #define QUICK_TAP_MS 175
 
