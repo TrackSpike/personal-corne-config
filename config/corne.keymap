@@ -59,13 +59,6 @@ SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
     ignore-modifiers;          // allow chording sticky mods & layers
 };
 
-// Sticky layer + sticky shift (workaround for issue #1421)
-ZMK_BEHAVIOR(sls, sticky_key,
-    release-after-ms = <1000>;
-    bindings = <&uc_shift>;
-    ignore-modifiers;
-)
-
 ZMK_LAYER(DEF_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
           &kp TAB       &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P           ___ 
