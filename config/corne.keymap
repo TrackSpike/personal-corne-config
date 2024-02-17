@@ -44,6 +44,16 @@ MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
+&sl {  // sticky-layer config
+    ignore-modifiers;          // allow chording sticky mods & layers
+};
+
+// Sticky layer + sticky shift (workaround for issue #1421)
+ZMK_BEHAVIOR(sls, sticky_key,
+    release-after-ms = <1000>;
+    bindings = <&uc_shift>;
+    ignore-modifiers;
+)
 
 ZMK_LAYER(DEF_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
